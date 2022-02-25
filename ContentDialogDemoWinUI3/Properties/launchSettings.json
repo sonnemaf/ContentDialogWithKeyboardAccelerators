@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ContentDialogDemoWinUI3 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ContentDialogDemoWinUI3 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
