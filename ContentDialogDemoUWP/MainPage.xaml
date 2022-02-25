@@ -9,7 +9,11 @@
 
     <Grid>
         <Button HorizontalAlignment="Center"
-                Click="Button_Click"
-                Content="Test" />
+            Click="Button_Click"
+            Content="Test">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator Key="T" />
+            </Button.KeyboardAccelerators>
+        </Button>
     </Grid>
 </Page>

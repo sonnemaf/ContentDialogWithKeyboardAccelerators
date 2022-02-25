@@ -28,6 +28,13 @@ namespace ContentDialogDemoUWP
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e) {
+            //var confirmDialog = new ContentDialog {
+            //    Title = "Confirm",
+            //    PrimaryButtonText = "Yes",
+            //    SecondaryButtonText = "No",
+            //    CloseButtonText = "Cancel",
+            //    Content = "Are you sure you want this?",
+            //};
             var confirmDialog = new ConfirmContentDialog();
             var result = await confirmDialog.ShowAsync();
 

@@ -9,6 +9,10 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button HorizontalAlignment="Center"
                 Click="Button_Click"
-                Content="Test" />
+                Content="Test">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator Key="T" />
+            </Button.KeyboardAccelerators>
+        </Button>
     </Grid>
 </Window>

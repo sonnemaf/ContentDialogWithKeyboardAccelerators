@@ -2,7 +2,7 @@
 using Microsoft.UI.Xaml.Input;
 using System.Collections.Generic;
 
-namespace ContentDialogDemoUWP.Helpers {
+namespace ContentDialogDemoWinUI3.Helpers {
 
     /// <summary>
     ///  <ContentDialog.PrimaryButtonStyle>
@@ -46,11 +46,7 @@ namespace ContentDialogDemoUWP.Helpers {
         /// <param name="d">UIElement that changed its KeyboardAccelerator attached property.</param>
         /// <param name="e">DependencyPropertyChangedEventArgs with the new and old value.</param> 
         private static void OnKeyboardAcceleratorChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            if (d is UIElement source) {
-                if (e.NewValue is KeyboardAccelerator value) {
-                    source.KeyboardAccelerators.Add(value);
-                }
-            }
+            if (d is UIElement source) if (e.NewValue is KeyboardAccelerator value) source.KeyboardAccelerators.Add(value);
         }
 
         /// <summary>
@@ -102,7 +98,7 @@ namespace ContentDialogDemoUWP.Helpers {
         /// Gets the value of the KeyboardAccelerators attached property from the specified FrameworkElement.
         /// </summary>
         public static object GetKeyboardAccelerators(DependencyObject obj) {
-            return (object)obj.GetValue(KeyboardAcceleratorsProperty);
+            return obj.GetValue(KeyboardAcceleratorsProperty);
         }
 
 
